@@ -1,14 +1,30 @@
-# OpenChain Telco SBOM Guide Version 1.0
+# OpenChain SBOM Operations Guide Version x.y.z
+
+<div style="text-align: right;">
+last update (ISO8601) : YYYY-MM-DDThh:mm:ssZ
+</div>
+
+## x. Document Status
+
+**This is a preliminary proposal document derived from the Telco-SBOM Guide** at https://github.com/OpenChain-Project/Telco-WG/blob/main/OpenChain-Telco-SBOM-Guide_EN.md.
+
+## x. Authors
+
+(TBD) See AUTHORS file
+
+## x. License
+
+[Creative Commons Attribution License 4.0 (CC-BY-4.0)](https://creativecommons.org/licenses/by/4.0/)
 
 ## 1. Scope
 
-This document “OpenChain Telco SBOM Guide” aims to outline certain requirements related to how an entity creates, delivers, and consumes Software Bill of Materials (SBOM), so that entities that produce and/or consume SBOMs that conform to this guide can ensure repeatability and streamlining of tools and processes for generating and consuming SBOMs. *Please Note* that this guide does not require a conforming entity to adopt OpenChain (in any version) but doing so is greatly encouraged.
+This document “OpenChain SBOM Operations Guide” aims to outline certain requirements related to how an entity creates, delivers, and consumes Software Bill of Materials (SBOM), so that entities that produce and/or consume SBOMs that conform to this guide can ensure repeatability and streamlining of tools and processes for generating and consuming SBOMs. *Please Note* that this guide does not require a conforming entity to adopt OpenChain (in any version) but doing so is greatly encouraged.
 
-This guide is designed to work on a per SBOM level: an entity can use it as its sole way of delivering SBOMs but it is the individual SBOM that the guide refers to, not the entity that provides the SBOM. An SBOM using this guide can be called “OpenChain Telco SBOM Guide Compatible.”
+This guide is designed to work on a per SBOM level: an entity can use it as its sole way of delivering SBOMs but it is the individual SBOM that the guide refers to, not the entity that provides the SBOM. An SBOM using this guide can be called “OpenChain SBOM Operations Guide Compatible.”
 
 Releasing SBOMs that match the requirements outlined in this guide does not preclude an entity from also delivering SBOMs for the same software in alternate ways or formats.
 
-This guide is licensed under [Creative Commons Attribution License 4.0 (CC-BY-4.0)](https://creativecommons.org/licenses/by/4.0/).
+~~This guide is licensed under [Creative Commons Attribution License 4.0 (CC-BY-4.0)](https://creativecommons.org/licenses/by/4.0/).~~
 
 ## 2. Terms and definitions
 
@@ -54,56 +70,88 @@ Package URL (PURL) is a _de facto_ standard to uniquely identify software packag
 ## 3. Requirements
 
 ### 3.1 Data Format
-An OpenChain Telco SBOM Guide compatible document SHALL adhere to the version 2.2 of the SPDX Data Format as standardized in ISO/IEC 5962:2021, or to the version 2.3 of the standard, and as further described below with respect to the included elements.
+An OpenChain SBOM Operations Guide compatible document SHALL use the standard SBOM format that is commonly used in the world.
 
 #### 3.1.1 Verification and reference material
-* ISO/IEC 5962:2021 Information technology — SPDX® Specification V2.2.1
-* [SPDX Specification V2.3](https://spdx.github.io/spdx-spec/v2.3/)
+**TBD**
+~~* ISO/IEC 5962:2021 Information technology — SPDX® Specification V2.2.1~~
+~~* [SPDX Specification V2.3](https://spdx.github.io/spdx-spec/v2.3/)~~
 
 #### 3.1.2 Rationale
-To ensure simplified handling and streamlining of tooling and competences in the telecommunications supply chain, both for suppliers and consumers of software, OpenChain Telco SBOM Guide Compatible documents shall adhere to the SPDX Data Format as standardized in ISO/IEC 5962:2021. By harmonizing on the use of this standard SBOM Data Format in an organization's external interfaces, the complexities for organizations supplying and consuming software are simplified, as only one set of unified requirements will be applicable.
+**TBD**
+~~To ensure simplified handling and streamlining of tooling and competences in the telecommunications supply chain, both for suppliers and consumers of software, OpenChain Telco SBOM Guide Compatible documents shall adhere to the SPDX Data Format as standardized in ISO/IEC 5962:2021. By harmonizing on the use of this standard SBOM Data Format in an organization's external interfaces, the complexities for organizations supplying and consuming software are simplified, as only one set of unified requirements will be applicable.~~
 
-As clarification, an entity is free to use alternative Data Formats for internal use, or deliver SBOMs in alternative Data Formats to organizations that so request or on its own initiative. The OpenChain Telco SBOM Guide is a SBOM-level specification to adhere to, and not an organizational specification to adhere to. There are no conforming entities, only conforming SBOMs, delivered by entities that have implemented the OpenChain Telco SBOM Guide.
+~~As clarification, an entity is free to use alternative Data Formats for internal use, or deliver SBOMs in alternative Data Formats to organizations that so request or on its own initiative. The OpenChain Telco SBOM Guide is a SBOM-level specification to adhere to, and not an organizational specification to adhere to. There are no conforming entities, only conforming SBOMs, delivered by entities that have implemented the OpenChain Telco SBOM Guide.~~
 
-### 3.2 SPDX Elements to be included in an OpenChain Telco SBOM Guide Compatible document
+### 3.2 SBOM Elements to be included in an OpenChain SBOM Operations Guide Compatible document
 
-The following elements are REQUIRED.
+**NOTE: We don't intend to create a new format, just clarify what attributes and its values should be implemented for practical use of SBOMs from complying some regulations and guidelines.**
 
-Document creation information
-* SPDXVersion: mandatory in SPDX
-* DataLicense: mandatory in SPDX
-* SPDXID: mandatory in SPDX
-* DocumentName: mandatory in SPDX
-* DocumentNamespace: mandatory in SPDX
-* Creator: mandatory in SPDX
-* Created: mandatory in SPDX
-* CreatorComment: to be able to put “SBOM Build information”
-
-Package information
-* PackageName: mandatory in SPDX
-* SPDXID: mandatory in SPDX
-* PackageVersion: needed by “NTIA SBOM Minimum elements”
-* PackageSupplier: needed by “NTIA SBOM Minimum elements”
-* PackageDownloadLocation: mandatory in SPDX
-* FilesAnalyzed
-* PackageChecksum: recommended by “NTIA SBOM Minimum elements”
-* PackageLicenseConcluded: mandatory in SPDX
-* PackageLicenseDeclared: mandatory in SPDX
-* PackageCopyrightText: mandatory in SPDX
-* ExternalRef: to be able to put the Package URL
-
-A package SHOULD be identified by a Package URL (PURL).
-
-The PURL SHOULD be put in ExternalRef field, e.g.
 ```
-ExternalRef: PACKAGE-MANAGER purl pkg:pypi/django@1.11.1
+- SBOM
+  +- SBOM Metadata
+  |  +- (Format Name: TBD)
+  |  +- Format Version
+  |  +- SBOM License
+  |  +- SBOM Id
+  |  +- Author Information
+  |  +- Timestamp
+  |  +- LifeCycle Phase
+  |  +- Comment
+  +- Component Information
+  |  +- Component Id
+  |  +- Component Name
+  |  +- Component Version
+  |  +- Component Supplier Information
+  |  +- Component Hash
+  |  +- Component File Name
+  |  +- Other Unique Id
+  |  +- Component Download location
+  |  +- Component License Information
+  |  +- Component Copyright
+  |  +- Support Level
+  |  +- End of Support
+  +- Relationships
+     +- Dependency Relationship
+     +- Heritage or Pedigree Relationship
+
+TBD
+  How can we handle Security Informatoin such as VEX and CSAF?
+  Should we discuss about other BOMs such as AI, SaaS, HW and Crypto?
 ```
 
-Relationships between SPDX elements
-* Relationship: at least DESCRIBES and CONTAINS, needed by “NTIA SBOM Minimum elements”
+| Category | Attribute name | description of Contents | Requirement level | notes |
+| :--: | :--- | :--- | :--- | :--- |
+| SBOM Metadata | Format Name | SBOM Format Name | TBD? | e.g., "SPDX", "CycloneDX" etc. but no defs in each format specs |
+| | Format Version | the versions of the SBOM format | **MUST** | |
+| | SBOM License | the license of the document (SPDX-short-identifier*1) | OPTIONAL | |
+| | SBOM Id | unique id of whole SBOM document | **MUST** | SHOULD be unique among all SBOMs to be distributed |
+| | Author Information | Information about the creator who created this SBOM | **MUST** | email address or other actual contact information is RECOMMENDED |
+| | Timestamp | date and time when the SBOM created | **MUST** | SHOULD be written with ISO8601 format with timezone |
+| | LifeCycle Phase | fixed string with SBOM types | OPTIONAL | currently discussing in Japanese, ref: https://docs.google.com/document/d/19Qc3LRW9jQ5Pw-_Hx19_gLyd8j8qVRDs/edit?usp=sharing&ouid=116114647877055468648&rtpof=true&sd=true |
+| | Comment | some notes for the SBOM | OPTIONAL | |
+| Component Information | Component Id | unique Id of each component | **MUST** | SHOULD be unique within the SBOM document |
+| | Component Name | name of the component | **MUST** | e.g. 'libc-bin' etc. |
+| | Component Version | version of the component | **MUST** | e.g. '2.35-0ubuntu3.1' etc |
+| | Component Supplier Information | Information about the supplier who distributed this component | **MUST** | Supplier identification such as community name and distributor is RECOMMENDED |
+| | Component Hash | Hash value of the executable component **OR** Hash value of the source archive file of the component | RECOMMENDED | |
+| | Component File Name | file name of the executable component **OR** file name of the source archive file of the component | RECOMMENDED | |
+| | Other Unique Id | Unique ID that identifies the exact component | RECOMMENDED | e.g., purl |
+| | Component Download location | URL where the executable component **OR** source archive file can be downloaded | OPTIONAL | If there is no information that can identify the component, such as purl, it is RECOMMENDED to fill this value. |
+| | Component License Information | licence information of the component | **MUST** | MUST use the SPDX short license identifer (TBD: component that does not have a SPDX short identifier defined) |
+| | Component Copyright Information | copyright information of the component | RECOMMENDED | TBD: What should we do if there are many copyrights? |
+| | Support level | The software level of support provided through monitoring and maintenance from the software component distributor | OPTIONAL | e.g., the software is actively maintained, no longer maintained, abandoned |
+| | End of Support | The software component’s end-of-support date. | OPTIONAL | |
+| Relationships | Dependency Relationship | relationship between several components | **MUST** | TBD: The package ["is included", "has dependencies", "statically or dynamically linked", etc.] SHOULD be described as a relationship |
+| | Heritage or Pedigree Relationship | TBD: need to clarify with Tak. | OPTIONAL | TBD: ["describes" etc.?] Row.B/Line.30 https://docs.google.com/spreadsheets/d/1SuGv1L3H_-Iq6dmH7DnjDgAa90LCRnoHB3DTfuWh0Jg/edit?usp=sharing |
 
 #### 3.2.1 Verification and reference material
 NTIA minimum elements
+CISA Baseline attributesBSI TR-03183-2
+IMDRF/FDA
+PCI-DSS/PCI-SSF
+
+NOTE: see [SBOM element comparison](https://docs.google.com/spreadsheets/d/1SuGv1L3H_-Iq6dmH7DnjDgAa90LCRnoHB3DTfuWh0Jg/edit?usp=sharing)
 
 #### 3.2.2 Rationale
 Recognizing the Telco industry need for harmonization and special requirements, possibly beyond the NTIA minimum elements, the “OpenChain Telco SBOM Guide” is proposed to ensure predictability to the industry as to the elements of an SBOM that is expected.
