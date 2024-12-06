@@ -146,10 +146,10 @@ TBD
 | | Heritage or Pedigree Relationship | TBD: need to clarify with Tak. | OPTIONAL | TBD: ["describes" etc.?] Row.B/Line.30 https://docs.google.com/spreadsheets/d/1SuGv1L3H_-Iq6dmH7DnjDgAa90LCRnoHB3DTfuWh0Jg/edit?usp=sharing |
 
 #### 3.2.1 Verification and reference material
-NTIA minimum elements
-CISA Baseline attributesBSI TR-03183-2
-IMDRF/FDA
-PCI-DSS/PCI-SSF
+NTIA minimum elements  
+CISA Baseline attributesBSI TR-03183-2  
+IMDRF/FDA  
+PCI-DSS/PCI-SSF  
 
 NOTE: see [SBOM element comparison](https://docs.google.com/spreadsheets/d/1SuGv1L3H_-Iq6dmH7DnjDgAa90LCRnoHB3DTfuWh0Jg/edit?usp=sharing)
 
